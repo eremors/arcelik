@@ -62,6 +62,11 @@ embedded_svc.settings.extraPrechatFormDetails = [{
 	"value": "27",
 	"transcriptFields": ["ARC_Org_Id__c"],
 	"displayToAgent": false
+}, {
+	"label":"Country Code", 
+	"value": "40",
+	"transcriptFields": ["ARC_Country_Code__c"],
+	"displayToAgent": false
 }]; 
 
 embedded_svc.settings.extraPrechatInfo = [{
@@ -97,7 +102,8 @@ embedded_svc.settings.extraPrechatInfo = [{
 
 embedded_svc.settings.prepopulatedPrechatFields = {
     Phone: "+40",
-	ARC_Org_Id__c: "27"
+	ARC_Org_Id__c: "27",
+	ARC_Country_Code__c: "40"
 };
 
 		embedded_svc.init(
