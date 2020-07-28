@@ -107,7 +107,7 @@ embedded_svc.settings.prepopulatedPrechatFields = {
 };
 
 		embedded_svc.init(
-			'https://argrp--TEST.cs89.my.salesforce.com',
+			'https://argrp--TEST.my.salesforce.com',
 			'https://test-argrp.cs89.force.com/chatro',
 			gslbBaseURL,
 			'00D0E00000022q8',
@@ -118,14 +118,14 @@ embedded_svc.settings.prepopulatedPrechatFields = {
 				buttonId: '5730E0000004CdN',
 				baseLiveAgentURL: 'https://d.la2-c1cs-cdg.salesforceliveagent.com/chat',
 				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I0E0000004CCRUA2_173148063c3',
-				isOfflineSupportEnabled: false
+				isOfflineSupportEnabled: true
 			}
 		);
 	};
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://argrp--TEST.cs89.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://argrp--TEST.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
