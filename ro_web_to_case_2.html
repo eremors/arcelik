@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ro-RO">
+	<head>
+		<meta charset="utf-8">
+			<!--
+	This website is powered by TYPO3 - inspiring people to share!
+	TYPO3 is a free open source Content Management Framework initially created by Kasper Skaarhoj and licensed under GNU/GPL.
+	TYPO3 is copyright 1998-2021 of Kasper Skaarhoj. Extensions are copyright of their respective owners.
+	Information and contribution at https://typo3.org/
+-->
+			<base href="/">
+				<meta name="generator" content="TYPO3 CMS" />
+				<link rel="stylesheet" type="text/css" href="/typo3conf/ext/theme/Resources/Public/Frontend/Css/main-rebrand.min.css?1617955744" media="all">
+					<script src="/typo3conf/ext/theme/Resources/Public/Frontend/JavaScript/vendor/modernizr-2.8.3.min.js?1570803651" type="text/javascript"/>
+					<script src="/typo3conf/ext/theme/Resources/Public/Frontend/JavaScript/main.min.js?1617955747" type="text/javascript"/>
+					<script type="text/javascript">
+/*<![CDATA[*/
+/*_scriptCode*/
+
+			/* decrypt helper function */
+		function decryptCharcode(n,start,end,offset) {
+			n = n + offset;
+			if (offset > 0 && n > end) {
+				n = start + (n - end - 1);
+			} else if (offset < 0 && n < start) {
+				n = end - (start - n - 1);
+			}
+			return String.fromCharCode(n);
+		}
+			/* decrypt string */
+		function decryptString(enc,offset) {
+			var dec = "";
+			var len = enc.length;
+			for(var i=0; i < len; i++) {
+				var n = enc.charCodeAt(i);
+				if (n >= 0x2B && n <= 0x3A) {
+					dec += decryptCharcode(n,0x2B,0x3A,offset);	/* 0-9 . , - + / : */
+				} else if (n >= 0x40 && n <= 0x5A) {
+					dec += decryptCharcode(n,0x40,0x5A,offset);	/* A-Z @ */
+				} else if (n >= 0x61 && n <= 0x7A) {
+					dec += decryptCharcode(n,0x61,0x7A,offset);	/* a-z */
+				} else {
+					dec += enc.charAt(i);
+				}
+			}
+			return dec;
+		}
+			/* decrypt spam-protected emails */
+		function linkTo_UnCryptMailto(s) {
+			location.href = decryptString(s,-2);
+		}
+
+
+/*]]>*/
+					</script>
+					<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+					<meta name="viewport" content="width=device-width, initial-scale=1" />
+					<meta name="google-site-verification" content="CEv8Kj3ALiPOWMS4byJDVvMYDigo-XYFuQKN9UVHYwM" />
+					<meta name="p:domain_verify" content="daf3f9be62dfe8262ad5bbad6da0da38"/>
+					<meta property="fb:app_id" content="1610342035944907">
+						<link rel="shortcut icon" href="/typo3conf/ext/theme/Resources/Public/Frontend/ImagesRebrand/icons/favicon.ico" />
+						<link rel="apple-touch-icon" href="/typo3conf/ext/theme/Resources/Public/Frontend/ImagesRebrand/icons/touch-icon-iphone.png">
+							<link rel="apple-touch-icon" sizes="76x76" href="/typo3conf/ext/theme/Resources/Public/Frontend/ImagesRebrand/icons/touch-icon-ipad.png">
+								<link rel="apple-touch-icon" sizes="120x120" href="/typo3conf/ext/theme/Resources/Public/Frontend/ImagesRebrand/icons/touch-icon-iphone-retina.png">
+									<link rel="apple-touch-icon" sizes="152x152" href="/typo3conf/ext/theme/Resources/Public/Frontend/ImagesRebrand/icons/touch-icon-ipad-retina.png">
+										<title>Test Form _Develop_ ro </title>
+										<link rel="canonical" href="/ro-ro/test-form"/>
+										<link rel="crawler" href="/ro-ro/test-form" hreflang="ro-ro" loc="588b0fd854a836cea4a97233a235758a"/>
+										<style type='text/css'>
+            .embeddedServiceHelpButton .helpButton .uiButton {
+                background-color: #bb442a;
+                font-family: "Arial", sans-serif;
+            }
+            .embeddedServiceHelpButton .helpButton .uiButton:focus {
+                outline: 1px solid #bb442a;
+            }
+										</style>
+									</head>
+									<body id="page-1034" class="layout-2 ">
+										<!-- template -->
+										<span id="top"/>
+										<div class="site-wrapper">
+											<header class="site-header" xmlns:f="http://www.w3.org/1999/html">
+												<div class="site-header__inner">
+													<div class="logo">
+														<a title="Grundig" href="/ro-ro">
+															<img src="/typo3conf/ext/theme/Resources/Public/Frontend/Images/logo-rebrand.svg" alt="Grundig" class="logo__img--big">
+																<img src="/typo3conf/ext/theme/Resources/Public/Frontend/Images/logo-rebrand.svg" alt="Grundig" class="logo__img--small">
+																</a>
+															</div>
+															<nav class="nav-main" eventLabel="main navigation">
+																<a href="#mainnav" class="nav-main__toggle-button">
+																	<span class="nav-main__toggle-icon--open"> Deschide meniul </span>
+																	<span class="nav-main__toggle-icon--close"> Inchide meniul </span>
+																</a>
+																<ul id="mainnav">
+																	<li class="childs">
+																		<a href="/ro-ro/electrocasnice/tehnologii/toate">Electrocasnice</a>
+																		<div class="nav-main__sub-nav">
+																			<nav class="nav-main__sub-nav__items">
+																				<ul class="nav-main__sub-nav__items-count-9">
+																					<li class="lazy lazy-hidden sub-nav__item--ha-tech" style="background-image:url('/fileadmin/user_upload/nav-main-home-technologies.png');">
+																						<a href="/ro-ro/electrocasnice/tehnologii/toate">Tehnologii</a>
+																					</li>
+																					<li class="lazy lazy-hidden sub-nav__item--ha-cool" style="background-image:url('/fileadmin/user_upload/nav-main-home-cooling.png');">
+																						<a href="/ro-ro/electrocasnice/aparate-frigorifice/toate">Aparate Frigorifice</a>
+																					</li>
+																					<li class="lazy lazy-hidden sub-nav__item--ha-cook" style="background-image:url('/fileadmin/user_upload/nav-main-home-cooking.png');">
+																						<a href="/ro-ro/electrocasnice/produse-de-gatit/toate">Produse de gatit</a>
+																					</li>
+																					<li class="lazy lazy-hidden sub-nav__item--ha-kitch" style="background-image:url('/fileadmin/Export_RO/Productimages/SDA/sda.png');">
+																						<a href="/ro-ro/electrocasnice/electrocasnice-mici/toate">Electrocasnice mici</a>
+																					</li>
+																					<li class="lazy lazy-hidden " style="background-image:url('/fileadmin/Export_RO/Productimages/SDA/Massimo_Bottura_icon_2.png');">
+																						<a href="/ro-ro/electrocasnice/colectia-massimo-bottura/toate">Colectia Massimo Bottura</a>
+																					</li>
+																					<li class="lazy lazy-hidden sub-nav__item--ha-rins" style="background-image:url('/fileadmin/user_upload/nav-main-home-dishwashing.png');">
+																						<a href="/ro-ro/electrocasnice/masini-de-spalat-vase/toate">Masini de spalat vase</a>
+																					</li>
+																					<li class="lazy lazy-hidden sub-nav__item--ha-wash" style="background-image:url('/fileadmin/user_upload/nav-main-home-washing.png');">
+																						<a href="/ro-ro/electrocasnice/ingrijirea-rufelor/toate">Ingrijirea rufelor</a>
+																					</li>
+																					<li class="lazy lazy-hidden " style="background-image:url('/fileadmin/Export_RO/Navigation/GR--Navigation--Klimageraete.png');">
+																						<a href="/ro-ro/electrocasnice/aparate-de-aer-conditionat/toate">Aparate de aer conditionat</a>
+																					</li>
+																					<li class="lazy lazy-hidden " style="background-image:url('/fileadmin/Export_RO/Navigation/HomeWhiz_1.png');">
+																						<a href="/ro-ro/electrocasnice/homewhiz/toate">HomeWhiz</a>
+																					</li>
+																				</ul>
+																			</nav>
+																		</div>
+																	</li>
+																	<li class="childs">
+																		<a href="/ro-ro/personal-care/hair-styling/toate">Ingrijire Personala</a>
+																		<div class="nav-main__sub-nav">
+																			<nav class="nav-main__sub-nav__items">
+																				<ul class="nav-main__sub-nav__items-count-2">
+																					<li class="lazy lazy-hidden " style="background-image:url('/fileadmin/Export_RO/Productimages/SDA/Nav-main-hairstyle.png');">
+																						<a href="/ro-ro/personal-care/hair-styling/toate">Hair Styling</a>
+																					</li>
+																					<li class="lazy lazy-hidden " style="background-image:url('/fileadmin/Export_RO/Productimages/SDA/Nav-main-man-care.png');">
+																						<a href="/ro-ro/ingrijire-personala/aparate-de-tuns-si-ras/toate">Aparate de tuns si ras</a>
+																					</li>
+																				</ul>
+																			</nav>
+																		</div>
+																	</li>
+																	<li class="childs">
+																		<a href="/ro-ro/suport">Suport</a>
+																	</li>
+																	<li class="childs">
+																		<a href="/ro-ro/despre-grundig/despre-grundig/despre-grundig">Despre Grundig</a>
+																	</li>
+																	<li class="childs">
+																		<a href="http://www.grundig-extragarantie.ro/" target="_blank">Extragarantie</a>
+																	</li>
+																	<li class="childs">
+																		<a href="https://www.grundig.com/ktchnmag/ro/" target="_blank">K!TCHNMAG</a>
+																	</li>
+																	<li class="childs">
+																		<a href="/ro-ro/contact">Contact</a>
+																	</li>
+																</ul>
+															</nav>
+															<nav class="nav-service">
+																<ul>
+																	<li class="nav--search">
+																		<a href="#search" class="nav__search-toggler">
+																			<svg class="nav__search-icon">
+																				<title>Cauta</title>
+																				<use xlink:href="/typo3conf/ext/theme/Resources/Public/Frontend/Images//icon-sprite.svg#magnifier" />
+																			</svg>
+																		</a>
+																	</li>
+																</ul>
+															</nav>
+														</div>
+													</header>
+													<main class="site-main">
+														<!--TYPO3SEARCH_begin-->
+														<div id="c1982" class="frame frame-default frame-type-html frame-layout-0">
+															<div class="section twoface twoface--third" id="contact">
+																<div class="wrapper wrapper--inner twoface__wrapper">
+																	<div class="twoface__face twoface__face--third">
+																		<div class="twoface__face__inner">
+																			<h4>Contact</h4>
+																			<p>Daca ai nevoie de consiliere pentru alegerea unui produs nou sau de asistenta tehnica in utilizarea si diagnosticarea electrocasnicelor deja achizitionate, contacteaza Centrul Service Grundig.</p>
+																			<h4>
+																				<span>*</span>9020</h4>
+																			<h4>0245605222</h4>
+																			<h4>0372015222</h4>
+																			<p>(tarif standard in retelele nationale)</p>
+																			<p>sau in scris, accesand Formularul de contact</p>
+																			<p>
+																				<strong>Program</strong>
+																			</p>
+																			<p>Luni - Vineri</p>
+																			<p>08:30 - 22:00*</p>
+																			<p>Sambata</p>
+																			<p>08:30 - 17:00</p>
+																			<p>
+																				<strong>*Orar valabil in luna Februarie</strong>
+																			</p>
+																		</div>
+																	</div>
+																	<div class="twoface__face twoface__face--two-third">
+																		<div class="twoface__face__inner">
+																			<form class="form form--spacy js-form-submit" action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST" data-invalid-error-title="Eroare!" data-invalid-error-message="Va rugam verificati informatia." data-error-title="Eroare!" data-error-message="Eroare in trimiterea formularului." data-success-message="<span>Buna ziua.<br>Solicitarea dumneavoastra a fost inregistrata si directionata catre departamentul responsabil. Va informam ca Arctic va colecta informații personale despre dumneavoastră, pentru scopuri diferite, in functie de tipul solicitarii, cu respectarea legilor aplicabile privind confidentialitatea si protectia datelor cu caracter personal. Dacă doriți să primiți mai multe informații despre modul cum folosim datele dumneavoastră, inclusiv despre drepturile dumnevoastra si posibilitatea de a ne contacta in acest sens, vă rugăm să consultati „Politica site-ului privind protectia datelor cu caracter personal”<br>Va multumim!<br>
+																									<br>Hello.<br>Your request has been registered and redirected to the responsible department. We would like to inform you that, based on the type of the request, Arctic will collect your personal data for different purposes, in accordance with the applicable law in regard to the confidentiality and personal data protection. If you wish to receive more information about how your information are used, as well as on your rights related thereto and possibility of contact in this matter, please consult Website Privacy Policy.<br>Thank you!</span>" >
+																										<div class="form__inner">
+																											<p class="form-input text ">
+																												<input placeholder="Prenume" id="Firstname" maxlength="80" name="00N0Y00000PNVmW" size="20" type="text" class="required" required="required" />
+																											</p>
+																											<p class="form-input text ">
+																												<input placeholder="Nume" id="Lastname" maxlength="80" name="00N0Y00000PNVme" size="20" type="text" class="required" required="required" />
+																											</p>
+																											<p class="form-input text ">
+																												<input placeholder="Adresa E-mail" id="email" maxlength="80" name="email" size="20" type="text" class="required" required="required" / />
+																											</p>
+																											<p class="form-input text ">
+																												<input placeholder="Numar de telefon" id="phone" maxlength="40" name="phone" size="20" type="text" class="required" required="required" / />
+																											</p>
+																											<p class="form-input text ">
+																												<input placeholder="Subiect" id="subject" maxlength="80" name="subject" size="20" type="text" class="required" required="required" / />
+																											</p>
+																											<p class="form-input description "/>
+																											<p class="form-input text ">
+																												<textarea placeholder="Mesaj" title="description" name="description"/>
+																											</p>
+																											<p class="form-input submit">
+																												<input type="submit" name="submit" value="Trimite cererea">
+																												</p>
+																												<div class="form__success">
+																													<h3>Thanks for your request!</h3>
+																													<p>We will take care as soon as possible.</p>
+																												</div>
+																											</div>
+																											<input type=hidden name="orgid" value="00D0Y000001f5q2">
+																												<input type=hidden name="origin" value="Web Site">
+																													<input type=hidden name="recordType" value="0121i000000LtFeAAK">
+																														<input type=hidden name="00N1i000002ECiv" value="27">
+																															<input type=hidden name="00N0Y00000RZQsB" value="Grundig">
+																																<input type="hidden" id="external" name="external" value="1" />
+																																<!--
+<input type=hidden name="orgid" value="00D0E00000022q8"><input type=hidden name="origin" value="Web site Grundig"><input type=hidden name="recordType" value="0120E000001L7dcQAC"><input type=hidden name="00N0E000006T2pl" value="27"><input type="hidden" id="external" name="external" value="1" />
+-->
+																																<div class="form__success">
+																																	<h3>Multumim pentru cererea dvs</h3>
+																																	<p>Vom avea grijă cât mai curând posibil.</p>
+																																</div>
+																															</form>
+																														</div>
+																													</div>
+																												</div>
+																											</div>
+																										</div>
+																										<!--TYPO3SEARCH_end-->
+																										<footer class="site-footer">
+																											<nav class="footer-path">
+																												<ul itemscope typeof="BreadcrumbList" vocab="https://schema.org/">
+																													<li property="itemListElement" itemscope typeof="ListItem">
+																														<a href="/ro-ro" property="item" typeof="WebPage">
+																															<span property="name">Home</span>
+																														</a>
+																														<meta property="position" content="1" />
+																													</li>
+																													<li property="itemListElement" itemscope typeof="ListItem" class="active">
+																														<a href="/ro-ro/test-form" property="item" typeof="WebPage">
+																															<span property="name">Test Form</span>
+																														</a>
+																														<meta property="position" content="2" />
+																													</li>
+																												</ul>
+																											</nav>
+																											<div class="footer"> </div>
+																											<div class="footer footer-open">
+																												<section class="footer-disclaimer" xmlns:f="http://www.w3.org/1999/html">
+																													<p>
+																														<span>© 2021 GRUNDIG Intermedia GmbH. </span>
+																														<span>Toate drepturile rezervate.</span>
+																													</p>
+																												</section>
+																												<nav class="footer-nav" eventLabel="footer">
+																													<ul>
+																														<li class="">
+																															<a href="/ro-ro/despre-grundig/despre-grundig/despre-grundig">Despre Grundig</a>
+																														</li>
+																														<li class="">
+																															<a href="/ro-ro/presa-media">Presa & Media</a>
+																														</li>
+																														<li class="">
+																															<a href="/ro-ro/sitemap">Sitemap</a>
+																														</li>
+																														<li class="">
+																															<a href="/ro-ro/suport">Contact</a>
+																														</li>
+																														<li class="">
+																															<a href="/ro-ro/termeni-si-conditii">Termeni si conditii</a>
+																														</li>
+																														<li class="">
+																															<a href="/ro-ro/protectia-datelor-personale">Protectia datelor personale</a>
+																														</li>
+																														<li class="footer-nav--countries">
+																															<a href="/ro-ro/tara">Tara</a>
+																														</li>
+																													</ul>
+																												</nav>
+																												<nav class="footer-social" eventLabel="social media links">
+																													<ul>
+																														<li>
+																															<a href="https://www.facebook.com/GrundigRomania/" target="_blank" class="facebook">Facebook<svg>
+																																	<use xlink:href="/typo3conf/ext/theme/Resources/Public/Frontend/Images/icon-sprite.svg#facebook" />
+																																</svg>
+																															</a>
+																														</li>
+																														<li>
+																															<a href="https://www.instagram.com/grundig.romania" target="_blank" class="instagram">Instagram<svg>
+																																	<use xlink:href="/typo3conf/ext/theme/Resources/Public/Frontend/Images/icon-sprite.svg#instagram" />
+																																</svg>
+																															</a>
+																														</li>
+																														<li>
+																															<a href="https://www.youtube.com/channel/UCexskCkgkSxizJQjPAVZIng" target="_blank" class="youtube">Youtube<svg>
+																																	<use xlink:href="/typo3conf/ext/theme/Resources/Public/Frontend/Images/icon-sprite.svg#youtube" />
+																																</svg>
+																															</a>
+																														</li>
+																													</ul>
+																												</nav>
+																											</div>
+																											<div class="footer-countries " xmlns:f="http://www.w3.org/1999/html" eventLabel="country">
+																												<p>&nbsp;</p>
+																												<p>&nbsp;</p>
+																												<p>&nbsp;</p>
+																												<p>&nbsp;</p>
+																												<div id="c1034" class="teaser ">
+																													<div class="wrapper wrapper--inner">
+																														<p>&nbsp;</p>
+																														<nav class="footer-countries__nav">
+																															<ul>
+																																<li class="at">
+																																	<a href="/de-at" eventlabel="country">Austria</a>
+																																</li>
+																																<li class="be">
+																																	<a href="/nl-be" eventlabel="country">Belgium</a>
+																																</li>
+																																<li class="bg">
+																																	<a href="/bg-bg" eventlabel="country">Bulgaria</a>
+																																</li>
+																																<li class="cn">
+																																	<a href="/zh-cn" eventlabel="country">China</a>
+																																</li>
+																																<li class="hr">
+																																	<a href="/hr-hr" eventlabel="country">Croatia</a>
+																																</li>
+																																<li class="cz">
+																																	<a href="/cs-cz" eventlabel="country">Czech Republic</a>
+																																</li>
+																																<li class="dk">
+																																	<a href="/da-dk" eventlabel="country">Denmark</a>
+																																</li>
+																																<li class="fi">
+																																	<a href="/fi-fi" eventlabel="country">Finland</a>
+																																</li>
+																																<li class="fr">
+																																	<a href="/fr-fr" eventlabel="country">France</a>
+																																</li>
+																																<li class="de">
+																																	<a href="/de-de" eventlabel="country">Germany</a>
+																																</li>
+																																<li class="gb">
+																																	<a href="https://www.grundig.co.uk/" target="_blank" eventlabel="country">Great Britain</a>
+																																</li>
+																																<li class="it">
+																																	<a href="/it-it" eventlabel="country">Italy</a>
+																																</li>
+																																<li class="lu">
+																																	<a href="/lu-lu" eventlabel="country">Luxemburg</a>
+																																</li>
+																																<li class="nl">
+																																	<a href="/nl-nl" eventlabel="country">Netherlands</a>
+																																</li>
+																																<li class="no">
+																																	<a href="/no-no" eventlabel="country">Norway</a>
+																																</li>
+																																<li class="pl">
+																																	<a href="/pl-pl" eventlabel="country">Poland</a>
+																																</li>
+																																<li class="ro">
+																																	<a href="/ro-ro" eventlabel="country">Romania</a>
+																																</li>
+																																<li class="rs">
+																																	<a href="/sr-rs" eventlabel="country">Serbia</a>
+																																</li>
+																																<li class="sk">
+																																	<a href="/cs-sk" eventlabel="country">Slovakia</a>
+																																</li>
+																																<li class="si">
+																																	<a href="/sl-si" eventlabel="country">Slovenia</a>
+																																</li>
+																																<li class="za">
+																																	<a href="/en-za" eventlabel="country">South Africa</a>
+																																</li>
+																																<li class="es">
+																																	<a href="/es-es" eventlabel="country">Spain</a>
+																																</li>
+																																<li class="se">
+																																	<a href="/sv-se" eventlabel="country">Sweden</a>
+																																</li>
+																																<li class="ch">
+																																	<a href="/de-ch" eventlabel="country">Switzerland</a>
+																																</li>
+																																<li class="tr">
+																																	<a href="https://www.grundig.com.tr/" target="_blank" eventlabel="country">Turkey</a>
+																																</li>
+																															</ul>
+																															<p>&nbsp;</p>
+																														</nav>
+																														<p>&nbsp;</p>
+																													</div>
+																													<p>&nbsp;</p>
+																												</div>
+																												<p>&nbsp;</p>
+																												<p>&nbsp;</p>
+																												<p>&nbsp;</p>
+																												<p>&nbsp;</p>
+																												<p>&nbsp;</p>
+																											</div>
+																										</footer>
+																										<a class="site-footer__up" href="/ro-ro/test-form#top"> Inapoi sus </a>
+																									</main>
+																									<div id="search" class="search" data-load-more-text="Arata mai multe rezultate" data-error-title="Eroare!" data-error-message="Rezultatele nu au putut fi incarcate" >
+																										<div class="search__wrapper">
+																											<div class="search-input">
+																												<div class="search-input__wrapper">
+																													<div class="search-input__inner">
+																														<div class="search-input__close"/>
+																														<div action="search" data-post="/ro-ro/search?tx_nuregcatalogue_search%5Baction%5D=Search&amp;tx_nuregcatalogue_search%5Bcontroller%5D=Search&amp;cHash=5c448ea25ce11dfd091d39ec48b169f7" id="tx_indexedsearch" class="search-input__form">
+																															<h6 title="Cauta rezultate pentru"> Ce cautati? </h6>
+																															<input placeholder="Cauta..." id="searchstring" type="text" name="search[sword]" value="" />
+																															<div class="tx-indexedsearch-hidden-fields">
+																																<input type="hidden" name="search[_sections]" value="0" />
+																																<input id="tx_indexedsearch_freeIndexUid" type="hidden" name="search[_freeIndexUid]" value="_" />
+																																<input id="tx_indexedsearch_pointer" type="hidden" name="search[pointer]" value="0" />
+																																<input type="hidden" name="search[ext]" value="" />
+																																<input type="hidden" name="search[searchType]" value="" />
+																																<input type="hidden" name="search[defaultOperand]" value="" />
+																																<input type="hidden" name="search[mediaType]" value="" />
+																																<input type="hidden" name="search[sortOrder]" value="" />
+																																<input type="hidden" name="search[group]" value="" />
+																																<input type="hidden" name="search[languageUid]" value="" />
+																																<input type="hidden" name="search[desc]" value="" />
+																																<input type="hidden" name="search[numberOfResults]" value="" />
+																																<input type="hidden" name="search[extendedSearch]" value="" />
+																															</div>
+																															<div class="search-input__form__total">()</div>
+																															<div class="search-input__form__submit">
+																																<span/>
+																															</div>
+																														</div>
+																													</div>
+																												</div>
+																												<div class="loadable js-dynamic-list-loadable">
+																													<svg width="120px" height="120px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="loadable__spinner">
+																														<circle cx="50" cy="50" r="40" fill="none" stroke-width="6" stroke-linecap=""/>
+																													</svg>
+																												</div>
+																											</div>
+																											<div class="search-results">
+																												<div class="search-results__wrapper">
+																													<div class="search-results__inner"> </div>
+																												</div>
+																											</div>
+																										</div>
+																									</div>
+																								</div>
+																								<aside> </aside>
+																								<datalist id="translation">
+																									<option id="compare_add_text" value="Produsul a fost adaugat in lista de comparare." />
+																									<option id="compare_add_title" value="Atentie!" />
+																									<option id="compare_already_error_text" value="Acest produs se afla deja in lista de comparatie." />
+																									<option id="compare_already_error_title" value="Atentie!" />
+																									<option id="compare_max_error_text" value="Nu puteti compara mai mult de 4 itemi simultan." />
+																									<option id="compare_max_error_title" value="Ne pare rau." />
+																									<option id="dealer_not_found_error_text" value="We could not find any dealer in your area!" />
+																									<option id="dealer_not_found_error_title" value="Eroare!" />
+																									<option id="dealer_search_error_text" value="Could not load dealers. Please try again later." />
+																									<option id="dealer_search_error_title" value="Eroare!" />
+																									<option id="distribution_not_found_error_text" value="We could not find any distributor in your area!" />
+																									<option id="distribution_not_found_error_title" value="Sorry!" />
+																									<option id="distribution_search_error_text" value="Could not load distributors. Please try again later." />
+																									<option id="distribution_search_error_title" value="Error!" />
+																									<option id="distribution_input_too_short_text" value="Your input is too short!" />
+																								</datalist>
+																								<script src="https://service.force.com/embeddedservice/5.0/esw.min.js" type="text/javascript"/>
+																								<script src="/typo3conf/ext/theme/Resources/Public/Frontend/JavaScript/Ro/embeddedservice.js?1612955952" type="text/javascript"/>
+																								<script type="text/javascript">
+/*<![CDATA[*/
+/*TS_inlineFooter*/
+var eventPathLabel = 'ro-ro/Test Form/';var eventLabelPrefix = 'ro-ro/';var country = 'ro';var language = 'ro';
+
+/*]]>*/
+																								</script>
+																							</body>
+																						</html>
