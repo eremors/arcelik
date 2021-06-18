@@ -11,7 +11,7 @@
 
 <body>
 
-<h1>Merhaba</h1>
+<h1>Merhaba 20210618_1147</h1>
 
 <style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
@@ -53,44 +53,44 @@
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 		
 		
-		embedded_svc.snippetSettingsFile.extraPrechatFormDetails = [{
-			"label":"Soyadı", 
-			"transcriptFields": ["ARC_VisitorsLastName__c"]
-		}, {
-			"label":"Adı", 
-			"transcriptFields": ["ARC_VisitorsFirstName__c"]
-		}, {
-			"label":"Telefon", 
-			"transcriptFields": ["ARC_VisitorsPhone__c"]
-		}, {
-			"label":"E-posta", 
-			"transcriptFields": ["ARC_VisitorsEmail__c"]
-		}]; 
-		
-		embedded_svc.snippetSettingsFile.extraPrechatInfo = [{
-		  "entityFieldMaps": [{
-			"doCreate":false,
-			"doFind":true,
-			"fieldName":"LastName",
-			"isExactMatch":true,
-			"label":"Soyadı"
-		  }, {
-			"doCreate":false,
-			"doFind":true,
-			"fieldName":"FirstName",
-			"isExactMatch":true,
-			"label":"Adı"
-		  }, {
-			"doCreate":false,
-			"doFind":true,
-			"fieldName":"Email",
-			"isExactMatch":true,
-			"label":"E-posta"
-		  }],
-		  "entityName":"Contact",
-		  "saveToTranscript":"Contact",
-		  "showOnCreate":true
-		}];
+embedded_svc.snippetSettingsFile.extraPrechatFormDetails = [{
+	"label":"SoyadÄ±", 
+	"transcriptFields": ["ARC_VisitorsLastName__c"]
+}, {
+	"label":"AdÄ±", 
+	"transcriptFields": ["ARC_VisitorsFirstName__c"]
+}, {
+	"label":"Telefon", 
+	"transcriptFields": ["ARC_VisitorsPhone__c"]
+}, {
+	"label":"E-posta", 
+	"transcriptFields": ["ARC_VisitorsEmail__c"]
+}]; 
+
+embedded_svc.snippetSettingsFile.extraPrechatInfo = [{
+  "entityFieldMaps": [{
+    "doCreate":false,
+    "doFind":true,
+    "fieldName":"LastName",
+    "isExactMatch":true,
+    "label":"SoyadÄ±"
+  }, {
+    "doCreate":false,
+    "doFind":true,
+    "fieldName":"FirstName",
+    "isExactMatch":true,
+    "label":"AdÄ±"
+  }, {
+    "doCreate":false,
+    "doFind":true,
+    "fieldName":"Email",
+    "isExactMatch":true,
+    "label":"E-posta"
+  }],
+  "entityName":"Contact",
+  "saveToTranscript":"Contact",
+  "showOnCreate":true
+}];
 
 		embedded_svc.init(
 			'https://argrp.my.salesforce.com',
