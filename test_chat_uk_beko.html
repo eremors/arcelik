@@ -9,7 +9,7 @@
 
 <body style="margin:0; padding:0; background-color:#F2F2F2;">
 
-<p>Welcome to the TEST UK Beko Support Site v20220307.1435</p>
+<p>Welcome to the TEST UK Beko Support Site v20220307.1440</p>
 
 <!-- This is where the embedded chat is triggered -->
 <table border="1">
@@ -107,7 +107,7 @@ function startEmbeddedChat() {
 			buttonId: '5730E0000004Cpn',
 			fallback: true
 		},
-		embedded_svc.settings.extraPrechatInfo = [{
+		extraPrechatInfo = [{
 		  "entityFieldMaps": [{
 			"doCreate":false,
 			"doFind":true,
@@ -137,7 +137,7 @@ function startEmbeddedChat() {
 		  "saveToTranscript":"Contact",
 		  "showOnCreate":true
 		}],
-		embedded_svc.settings.extraPrechatFormDetails = [{
+		extraPrechatFormDetails = [{
 			"label":"Last Name", 
 			"transcriptFields": ["ARC_VisitorsLastName__c"]
 		}, {
@@ -159,12 +159,12 @@ function startEmbeddedChat() {
 			"value": "44",
 			"transcriptFields": ["ARC_Country_Code__c"],
 			"displayToAgent": false
-		}]/*,
-		embedded_svc.settings.prepopulatedPrechatFields = {
+		}],
+		prepopulatedPrechatFields = {
 			Phone: "+44",
 			ARC_Org_Id__c: "17",
 			ARC_Country_Code__c: "44"
-		}*/
+		}
 	});
 }
 </script>
