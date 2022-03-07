@@ -9,7 +9,7 @@
 
 <body style="margin:0; padding:0; background-color:#F2F2F2;">
 
-<p>Welcome to the TEST UK Beko Support Site v20220307.1645</p>
+<p>Welcome to the TEST UK Beko Support Site v20220307.1650</p>
 
 <!-- This is where the embedded chat is triggered -->
 <table border="1">
@@ -84,6 +84,43 @@
 			"transcriptFields": ["ARC_Country_Code__c"],
 			"displayToAgent": false
 		}]; 
+		
+		embedded_svc.settings.extraPrechatInfo = [{
+		  "entityFieldMaps": [{
+			"doCreate":false,
+			"doFind":true,
+			"fieldName":"LastName",
+			"isExactMatch":true,
+			"label":"Last Name"
+		  }, {
+			"doCreate":false,
+			"doFind":true,
+			"fieldName":"FirstName",
+			"isExactMatch":true,
+			"label":"First Name"
+		  }, {
+			"doCreate":false,
+			"doFind":true,
+			"fieldName":"Phone",
+			"isExactMatch":false,
+			"label":"Phone"
+		  },{
+			"doCreate":false,
+			"doFind":true,
+			"fieldName":"Email",
+			"isExactMatch":true,
+			"label":"Email"
+		  }],
+		  "entityName":"Contact",
+		  "saveToTranscript":"Contact",
+		  "showOnCreate":true
+		}];
+
+		embedded_svc.settings.prepopulatedPrechatFields = {
+			Phone: "+44",
+			ARC_Org_Id__c: "17",
+			ARC_Country_Code__c: "44"
+		};
 		
 		/* End - Prechat Configuration for Beko UK */
 
