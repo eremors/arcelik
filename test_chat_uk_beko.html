@@ -9,12 +9,12 @@
 
 <body style="margin:0; padding:0; background-color:#F2F2F2;">
 
-<p>Welcome to the TEST UK Beko Support Site v20220307.1735</p>
+<p>Welcome to the TEST UK Beko Support Site v20220310.1138</p>
 
 <!-- This is where the embedded chat is triggered -->
 <table border="1">
 <tr>
-<td>Click to Chat:</td><td><button onclick="startEmbeddedChat()">Chat</button></td>
+<td>Click to Chat:</td><td><button onclick="bootstrapChat()">Chat</button></td>
 </tr>
 </table>
 
@@ -158,6 +158,11 @@
 
 
 <script language="JavaScript" type="text/javascript">
+
+function bootstrapChat() {
+		embedded_svc.bootstrapEmbeddedService();
+	}
+
 /**
 * This function will start the chat session. It will be triggered by a button residing somewhere in the page. Thus the chat will not start automatically but it will start manually.
 */
