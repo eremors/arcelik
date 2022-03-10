@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+</head>
+
+<body style="margin:0; padding:0; background-color:#F2F2F2;">
+
+<p>Welcome to the TEST UK Beko Support Site v20220310.1125</p>
+
+
+
+<!-- This section creates the div with the UI for chat invitation whose id is 573D01234567890 -->
+<!-- For this usage, the "Animation" type of this invitation should be set to "Custom",
+otherwise two invitations will appear (the Salesforce-provided one and this custom one). -->
+<p>A table in the web page...</p>
+<table border="1"><tr><td>
+	<div id="liveagent_invite_button_5730E0000004CqW" style="display: none; position: static; border: 2px solid darkblue; border-radius: 5px; background-color: lightblue; height: 100px; width: 200px;">
+		<!-- Creates an "X" option to reject or close the invitation if it's offered  -->
+		<div style="cursor: pointer; padding: 5px; right: 0px; position: static; color: darkred; font-weight: bold;" onclick="liveagent.rejectChat('5730E0000004CqW')">X</div>
+	<!-- Provides the Start Chat option for the customer to accept or start the chat for the invitation  -->
+	<div style="cursor: pointer; top: 42px; left: 65px; position: static;font-weight: bold; font-size: 16px;" onclick="liveagent.startChat('5730E0000004CqW')">Start Chat</div>
+	</div>
+</td></tr>
+<table>
+
+<!-- Chat Deployment Code that makes chat available -->
+<script type='text/javascript' src='https://c.la2-c1cs-fra.salesforceliveagent.com/content/g/js/54.0/deployment.js'></script>
+
+<script type='text/javascript'>
+	// Creates the callback function used for the Chat invitation to present it or not based on availability and the customer's interaction with it 
+	function buttonCallback(e) {
+	
+		// When the chat invitation is online (i.e. at least one available, skilled agent), display it at position top 200px and left 300px 		
+		if (e == liveagent.BUTTON_EVENT.BUTTON_AVAILABLE) {
+		document.getElementById('liveagent_invite_button_5730E0000004CqW').style.display = '';
+		//document.getElementById('liveagent_invite_button_5730E0000004CqW').style.left = '300px';
+		//document.getElementById('liveagent_invite_button_5730E0000004CqW').style.top = '200px';
+		}
+		
+		// When the chat invitation is offline, don't display it 
+		if (e == liveagent.BUTTON_EVENT.BUTTON_UNAVAILABLE) {
+		document.getElementById('liveagent_invite_button_5730E0000004CqW').style.display = 'none';
+		}
+		
+		// When the chat invitation is accepted, stop displaying it 		
+		if (e == liveagent.BUTTON_EVENT.BUTTON_ACCEPTED) {
+		document.getElementById('liveagent_invite_button_5730E0000004CqW').style.display = 'none';
+		}
+		
+		// When the chat invitation is rejected, stop displaying it 		
+		if (e == liveagent.BUTTON_EVENT.BUTTON_REJECTED) {
+		document.getElementById('liveagent_invite_button_5730E0000004CqW').style.display = 'none';
+		}
+	}
+
+	// Registers the function buttonCallback() above as the callback for the chat invitation whose id is 573D01234567890 	
+	liveagent.addButtonEventHandler('5730E0000004CqW', buttonCallback);
+
+	// Chat deployment code that initializes chat for the deployment whose id is 572D01234567890 and org is 00DD01234567890 
+	liveagent.init('https://d.la2-c1cs-fra.salesforceliveagent.com/chat', '5720E0000004CSe', '00D0E00000022q8');
+
+	// Enable Chat advanced logging to be available through the Browser's Developer Console 
+	liveagent.enableLogging();
+</script>
+
+
+
+
+</body>
+
+</html>
