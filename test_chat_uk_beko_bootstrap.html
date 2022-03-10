@@ -9,7 +9,7 @@
 
 <body style="margin:0; padding:0; background-color:#F2F2F2;">
 
-<p>Welcome to the TEST UK Beko Support Site v20220310.1245</p>
+<p>Welcome to the TEST UK Beko Support Site v20220310.1313</p>
 
 <!-- This is where the embedded chat is triggered -->
 <table border="1">
@@ -124,22 +124,24 @@
 		};
 		
 		embedded_svc.addEventHandler("onSettingsCallCompleted", function(data) {
-			console.log("onSettingsCallCompleted event was fired. Agent availability status is " + data.isAgentAvailable ? "onSettingsCallCompleted-online": "onSettingsCallCompleted-offline");
 			if (data.isAgentAvailable) {
+				console.log("onSettingsCallCompleted-online");
 				document.getElementById('chatButton').innerHTML = "Chat Available";
 				document.getElementById("chatButton").disabled = false;
 			} else {
+				console.log("onSettingsCallCompleted-offline");
 				document.getElementById('chatButton').innerHTML = "Chat Unavailable";
 				document.getElementById("chatButton").disabled = true;
 			}
 		});
 		
 		embedded_svc.addEventHandler("onAvailability", function(data) {
-			console.log("onAvailability event was fired. Agent availability status is " + data.isAgentAvailable ? "onAvailability-online": "onAvailability-offline");
 			if (data.isAgentAvailable) {
+				console.log("onAvailability-online");
 				document.getElementById('chatButton').innerHTML = "Chat Available";
 				document.getElementById("chatButton").disabled = false;
 			} else {
+				console.log("onAvailability-offline");
 				document.getElementById('chatButton').innerHTML = "Chat Unavailable";
 				document.getElementById("chatButton").disabled = true;
 			}
