@@ -9,7 +9,7 @@
 
 <body style="margin:0; padding:0; background-color:#F2F2F2;">
 
-<p>Welcome to the TEST PK Dawlance Support Site v20230207.1400</p>
+<p>Welcome to the TEST PK Dawlance Support Site v20230207.1413</p>
 
 <style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
@@ -118,13 +118,13 @@
 		/* End - Prechat Configuration for Dawlance PK */
 
 		embedded_svc.init(
-			'https://argrp--TEST.my.salesforce.com',
-			'https://test-argrp.cs89.force.com/chatpkbeko',
+			'https://argrp--test.sandbox.my.salesforce.com',
+			'https://argrp--test.sandbox.my.salesforce-sites.com/chatpkbeko',
 			gslbBaseURL,
 			'00D0E00000022q8',
 			'PK_Embedded_Chat_Deployment',
 			{
-				baseLiveAgentContentURL: 'https://d.la2-c1cs-fra.salesforceliveagent.com/content',
+				baseLiveAgentContentURL: 'https://c.la2-c1cs-fra.salesforceliveagent.com/content',
 				deploymentId: '5720E0000004CTN',
 				buttonId: '5730E0000004Cql',
 				baseLiveAgentURL: 'https://d.la2-c1cs-fra.salesforceliveagent.com/chat',
@@ -136,7 +136,7 @@
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://argrp--TEST.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://argrp--test.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
