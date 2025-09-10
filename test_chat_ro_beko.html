@@ -9,7 +9,7 @@
 
 <body style="margin:0; padding:0; background-color:#F2F2F2;">
 
-<p>Welcome to the TEST RO Beko Support Site</p>
+<p>Welcome to the TEST RO Beko Support Site 202509101405</p>
 
 <style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
@@ -107,102 +107,6 @@ embedded_svc.settings.prepopulatedPrechatFields = {
 };
 
 
-		
-
-	<style type='text/css'>
-	.embeddedServiceHelpButton .helpButton .uiButton {
-		background-color: #0083be;
-		font-family: "Arial", sans-serif;
-	}
-	.embeddedServiceHelpButton .helpButton .uiButton:focus {
-		outline: 1px solid #0083be;
-	}
-</style>
-
-<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
-<script type='text/javascript'>
-	var initESW = function(gslbBaseURL) {
-		embedded_svc.settings.displayHelpButton = true; //Or false
-		embedded_svc.settings.language = 'ro'; //For example, enter 'en' or 'en-US'
-
-		embedded_svc.settings.defaultMinimizedText = 'Discuta cu un Expert'; //(Defaults to Chat with an Expert)
-		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
-
-		embedded_svc.settings.loadingText = 'Se încarcă'; //(Defaults to Loading)
-		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
-
-		// Settings for Chat
-		//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
-			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
-			// Returns a valid button ID.
-		//};
-		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
-		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
-		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
-
-		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
-		embedded_svc.settings.entryFeature = 'LiveAgent';
-		
-embedded_svc.settings.extraPrechatFormDetails = [{
-	"label":"Nume", 
-	"transcriptFields": ["ARC_VisitorsLastName__c"]
-}, {
-	"label":"Prenume", 
-	"transcriptFields": ["ARC_VisitorsFirstName__c"]
-}, {
-	"label":"Telefon", 
-	"transcriptFields": ["ARC_VisitorsPhone__c"]
-}, {
-	"label":"E-mail", 
-	"transcriptFields": ["ARC_VisitorsEmail__c"]
-}, {
-	"label":"ID Organizatie", 
-	"value": "27",
-	"transcriptFields": ["ARC_Org_Id__c"],
-	"displayToAgent": false
-}, {
-	"label":"Country Code", 
-	"value": "40",
-	"transcriptFields": ["ARC_Country_Code__c"],
-	"displayToAgent": false
-}]; 
-
-embedded_svc.settings.extraPrechatInfo = [{
-  "entityFieldMaps": [{
-    "doCreate":false,
-    "doFind":true,
-    "fieldName":"LastName",
-    "isExactMatch":true,
-    "label":"Nume"
-  }, {
-    "doCreate":false,
-    "doFind":true,
-    "fieldName":"FirstName",
-    "isExactMatch":true,
-    "label":"Prenume"
-  }, {
-    "doCreate":false,
-    "doFind":true,
-    "fieldName":"Phone",
-	"isExactMatch":false,
-    "label":"Telefon"
-  },{
-    "doCreate":false,
-    "doFind":true,
-    "fieldName":"Email",
-    "isExactMatch":true,
-    "label":"E-mail"
-  }],
-  "entityName":"Contact",
-  "saveToTranscript":"Contact",
-  "showOnCreate":true
-}];
-
-embedded_svc.settings.prepopulatedPrechatFields = {
-    Phone: "+40",
-	ARC_Org_Id__c: "27",
-	ARC_Country_Code__c: "40"
-};
 
 		embedded_svc.init(
 			'https://argrp--TEST.my.salesforce.com',
@@ -233,7 +137,7 @@ embedded_svc.settings.prepopulatedPrechatFields = {
 		initESW('https://service.force.com');
 	}
 </script>
-</script>
+
 
 </body>
 
