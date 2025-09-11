@@ -9,7 +9,7 @@
 
 <body style="margin:0; padding:0; background-color:#F2F2F2;">
 
-<h1>Welcome to the TEST RO Beko Enhanced Chat - 20250909</h1>
+<h1>Welcome to the TEST RO Beko Enhanced Chat - 202509111340</h1>
 
 
 <script type='text/javascript'>
@@ -29,8 +29,35 @@
 			console.error('Error loading Embedded Messaging: ', err);
 		}
 	};
+	
+	//Passing Web or Default Context to Prechat - BEGIN
+    var sDefaultCountryCode = "40"; // International phone code for Romania
+        
+    window.addEventListener("onEmbeddedMessagingReady", e => {
+        //log event
+        console.log("onEmbeddedMessagingReady event triggered");
+        
+        //set visible prechat field
+        embeddedservice_bootstrap.prechatAPI.setVisiblePrechatFields({
+            // List the pre-chat field names with the value and whether
+            // it's editable in the pre-chat form.
+            "Country_Code": {
+              "value": sDefaultCountryCode,
+              "isEditableByEndUser": true
+            }
+        });
+      
+        //Set invisible prechat field
+        
+    });
+    //Passing Web Context to Prechat - END
+	
+	
 </script>
 <script type='text/javascript' src='https://argrp--test.sandbox.my.site.com/ESWARCROEnhancedChatDep1757423534057/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
+
+
 
 </body>
 
