@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+</head>
+
+<body style="margin:0; padding:0; background-color:#F2F2F2;">
+
+<h1>Welcome to the TEST RO Beko Enhanced Chat with Agentforce - 202510311130</h1>
+
+
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'ro'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00D0E00000022q8',
+				'ARC_RO_Enhanced_Chat_Channel_Beko_ASA',
+				'https://argrp--test.sandbox.my.site.com/ESWARCROEnhancedChatC1761897001196',
+				{
+					scrt2URL: 'https://argrp--test.sandbox.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+	
+	//Passing Web or Default Context to Prechat - BEGIN
+    var sDefaultCountryCode = "40"; // International phone code for Romania
+        
+    window.addEventListener("onEmbeddedMessagingReady", e => {
+        //log event
+        console.log("onEmbeddedMessagingReady event triggered");
+        
+        //set visible prechat field
+        embeddedservice_bootstrap.prechatAPI.setVisiblePrechatFields({
+            // List the pre-chat field names with the value and whether
+            // it's editable in the pre-chat form.
+            "Country Code": {
+              "value": sDefaultCountryCode,
+              "isEditableByEndUser": true
+            }
+        });
+      
+        //Set invisible prechat field
+        
+    });
+    //Passing Web Context to Prechat - END
+	
+	
+</script>
+<script type='text/javascript' src='https://argrp--test.sandbox.my.site.com/ESWARCROEnhancedChatC1761897001196/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
+</body>
+
+</html>
