@@ -9,13 +9,13 @@
 
 <body style="margin:0; padding:0; background-color:#F2F2F2;">
 
-<h1>Welcome to the TEST RO Beko Enhanced Chat with Agentforce - 202510311429</h1>
+<h1>Welcome to the TEST RO Beko Enhanced Chat with Agentforce - 20251103</h1>
 
 
 <script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+			embeddedservice_bootstrap.settings.language = 'ro'; // For example, enter 'en' or 'en-US'
 
 			embeddedservice_bootstrap.init(
 				'00D0E00000022q8',
@@ -44,7 +44,11 @@
             "Country Code": {
               "value": sDefaultCountryCode,
               "isEditableByEndUser": true
-            }
+            },
+			"Language" : {
+				"value" : embeddedservice_bootstrap.settings.language,
+				"isEditableByEndUser": false
+             }
         });
       
         //Set invisible prechat field
