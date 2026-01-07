@@ -9,7 +9,7 @@
 
 <body style="margin:0; padding:0; background-color:#F2F2F2;">
 
-<h1>Welcome to the TEST TR Grundig Enhanced Chat - Custom Button + Hidden Prechat - 202601071330</h1>
+<h1>Welcome to the TEST TR Grundig Enhanced Chat - Custom Button + Hidden Prechat - 202601071530</h1>
 
 <script type='text/javascript'>
 	function initEmbeddedMessaging() {
@@ -34,14 +34,22 @@
 	};
 	
 	//Passing Web or Default Context to Prechat - BEGIN
-    var sDefaultPhone = "5336364240"; // International phone code for Romania
+    var pFirstName = "Hasan";
+	var pLastName = "Atmaca";
+	var pPhone = "566874125";
+	var pEmail = "hasan@atmaca303.org";
         
     window.addEventListener("onEmbeddedMessagingReady", e => {
         //log event
         console.log("onEmbeddedMessagingReady event triggered");
         
         //Set invisible prechat field
-		embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Phone" : sDefaultPhone});
+		embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields(
+		{"Phone" : pPhone, 
+		"Hidden_First_Name" : pFirstName, 
+		"Hidden_Last_Name" : pLastName, 
+		"Hidden_Email" : pEmail
+		});
         
     });
     //Passing Web Context to Prechat - END
