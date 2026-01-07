@@ -9,7 +9,7 @@
 
 <body style="margin:0; padding:0; background-color:#F2F2F2;">
 
-<h1>Welcome to the TEST TR Grundig Enhanced Chat - 202601070900</h1>
+<h1>Welcome to the TEST TR Grundig Enhanced Chat - 202601071046</h1>
 
 
 
@@ -18,6 +18,9 @@
 		try {
 			//embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 			embeddedservice_bootstrap.settings.language = 'tr';
+			
+			// Hide standard chat button so that it can be launched by custom button
+			embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;
 
 			embeddedservice_bootstrap.init(
 				'00D0E00000022q8',
